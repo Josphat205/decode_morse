@@ -20,6 +20,16 @@ def decode_word(word)
   end
   res
 end
+def decode_message(message)
+  res1 =[]
+ word1 =message.split('   ').each do |word|
+ res1.push("#{decode_word(word)}")
+end
+puts res1.join(' ')
+end
+ 
 
 puts decode_char('.-')
 puts decode_word('-- -.--')
+decode_message("-- -.--   -. .- -- .")
+decode_message(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
