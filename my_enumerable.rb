@@ -7,4 +7,8 @@ module MyEnumerable
     def any?(&block)
       @list.any?(&block)
     end
+
+    def filter(&block)
+      @list.filter(&block)
+    end
 end
